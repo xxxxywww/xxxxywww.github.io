@@ -349,6 +349,55 @@ img {
   overflow: hidden;
 }
 
+/* Interactive Hero Canvas */
+#hero-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.canvas-fx-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  vertical-align: middle;
+}
+
+.canvas-fx-toggle:hover {
+  border-color: var(--accent-primary);
+  color: var(--text-primary);
+}
+
+.canvas-fx-toggle.active {
+  color: var(--accent-secondary);
+  border-color: rgba(6, 182, 212, 0.4);
+  background: rgba(6, 182, 212, 0.08);
+}
+
+.canvas-fx-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #10b981;
+}
+
+.canvas-fx-toggle:not(.active) .canvas-fx-dot {
+  background: var(--text-muted);
+}
+
 /* Ambient Background Lights */
 .ambient-glow-1 {
   position: absolute;

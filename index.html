@@ -79,6 +79,9 @@
        HERO SECTION
        ========================================================================== -->
   <section id="hero" class="hero-section">
+    <!-- Interactive Creative Canvas Background -->
+    <canvas id="hero-canvas"></canvas>
+
     <div class="container">
       <div class="hero-grid">
         <!-- Hero Text & Copy -->
@@ -92,6 +95,10 @@
               <i data-lucide="sparkles" style="width: 14px; height: 14px; color: var(--accent-tertiary);"></i>
               코딩 지식을 겸비한 디자이너
             </span>
+            <button id="canvas-fx-toggle" class="canvas-fx-toggle active" title="캔버스 파티클 효과 켜기/끄기">
+              <span class="canvas-fx-dot"></span>
+              <span class="toggle-label">Canvas FX: ON</span>
+            </button>
           </div>
 
           <h1 class="hero-title">
@@ -708,6 +715,7 @@
 
   <!-- Scripts -->
   <script src="./js/projects-data.js"></script>
+  <script src="./js/canvas-network.js"></script>
   <script src="./js/playground.js"></script>
   <script src="./js/main.js"></script>
   <script>
